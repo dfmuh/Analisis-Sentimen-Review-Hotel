@@ -23,8 +23,8 @@ from keras.layers import Convolution1D
 from keras import initializers, regularizers, constraints, optimizers, layers
 
 
-st.set_page_config(page_title="Indonesian News Title Category Classifier",
-                   page_icon="🗞️", layout="centered")
+st.set_page_config(page_title="Indonesian Hotel Review Sentiment Analysis",
+                   page_icon="🏨", layout="centered")
 
 
 @st.cache_resource()
@@ -41,7 +41,7 @@ inference, Tokenizer = build_model()
 
 st.title('🏨 Indonesian Hotel Review Sentiment Analysis')
 
-with st.expander('📋 Tentang App ini', expanded=False):
+with st.expander('📋 Tentang App', expanded=False):
     st.markdown("""
     * Indonesian Hotel Review app adalah alat yang mudah digunakan yang memungkinkan Anda memprediksi kategori ulasan hotel yang diberikan.
     * Anda hanya dapat memprediksi satu ulasan dalam satu waktu.

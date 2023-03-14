@@ -52,7 +52,7 @@ def main() :
   model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
   print(model.summary())
 
-  history = model.fit(padded_sequence, sentiment_label[0], validation_split=0.1, epochs=20, batch_size=64)
+  history = model.fit(padded_sequence, sentiment_label[0], validation_split=0.1, epochs=10, batch_size=20)
   model.save('lstm_model.h5')
 
   plt.plot(history.history['accuracy'], label= 'acc')
