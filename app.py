@@ -69,31 +69,6 @@ review = st.text_input(
 
 if review:
     with st.spinner('Loading prediction...'):
-        # tokenized_test = Tokenizer.texts_to_sequences(title)
-        # X_test = pad_sequences(tokenized_test, maxlen=200)
-        # result = inference.predict(X_test)
-        # pred_labels = []
-        # for i in result:
-        #     if i > 0.5:
-        #         pred_labels.append(1)
-        #     else:
-        #         pred_labels.append(0)
-
-        # for i in range(len(title)):
-        #     if pred_labels[i] == 1:
-        #         s = 'Fact'
-        #     else:
-        #         s = 'Hoax'
-
-        # tw = Tokenizer.texts_to_sequences([text])
-        # tw = pad_sequences(tw,maxlen=200)
-        # prediction = int(model.predict(tw).round().item())
-        # if sentiment_label[1][prediction] == 0:
-        #     result = "Negatif"
-        # else :
-        #     result = "Positif"
-        # print("Hasil Prediksi : ", result)
-
         s = tr.predict_sentiment(review)
         st.markdown(f'Category for this news is **[{s}]**')
 
