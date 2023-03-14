@@ -1,5 +1,8 @@
 import train as tr
 
+# test_sentence = input('Masukkan kalimat : ')
+# tr.predict_sentiment(test_sentence)
+
 test_sentence1 ="Pelayanan hotel tidak ramah"
 tr.predict_sentiment(test_sentence1)
 

@@ -35,7 +35,7 @@ padded_sequence = pad_sequences(encoded_docs, maxlen=200)
 
 # print(padded_sequence[0])
 
-model = load_model('lstm_model.h5')
+# model = load_model('lstm_model.h5')
 
 def main() :
   embedding_vector_length = 32
@@ -48,8 +48,8 @@ def main() :
   model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
   print(model.summary())
 
-  history = model.fit(padded_sequence, sentiment_label[0], validation_split=0.1, epochs=10, batch_size=20)
-  model.save('lstm_model.h5')
+  history = model.fit(padded_sequence, sentiment_label[0], validation_split=0.1, epochs=20, batch_size=64)
+  model.save('lstm_model_modifikasi.h5')
 
   plt.plot(history.history['accuracy'], label= 'acc')
   plt.plot(history.history['val_accuracy'], label= 'val_acc')
