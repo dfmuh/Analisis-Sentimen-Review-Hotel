@@ -70,7 +70,7 @@ review = st.text_input(
 if review:
     with st.spinner('Loading prediction...'):
         s = tr.predict_sentiment(review)
-        st.markdown(f'Category for this news is **[{s}]**')
+        st.markdown(f'Review tersebut termasuk review **[{s}]**')
 
 
 st.markdown(' ')
